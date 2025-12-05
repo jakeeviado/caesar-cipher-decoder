@@ -1,9 +1,13 @@
-package com.caesar.app;
+package com.caesar.app.encryption.encryptionImpl;
 
-public class Encrypt {
+import com.caesar.app.domain.Alphabet;
+import com.caesar.app.encryption.IEncryption;
+
+public class EncryptImpl implements IEncryption {
 
     Alphabet alphabet = new Alphabet();
 
+    @Override
     public String encrypt(String message, int shiftKey) {
         message = message.toLowerCase();
         StringBuilder cipherText = new StringBuilder();

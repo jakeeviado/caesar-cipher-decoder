@@ -1,9 +1,13 @@
-package com.caesar.app;
+package com.caesar.app.decryption.decryptionImpl;
 
-public class Decrypt {
+import com.caesar.app.decryption.IDecryption;
+import com.caesar.app.domain.Alphabet;
+
+public class DecryptImpl implements IDecryption {
 
     Alphabet alphabet =  new Alphabet();
 
+    @Override
     public String decrypt(String cipherText, int shiftKey) {
         cipherText = cipherText.toLowerCase();
         StringBuilder message = new StringBuilder();
